@@ -14,6 +14,21 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+
+-- Volcando estructura de base de datos para dbtienda
+CREATE DATABASE IF NOT EXISTS `dbtienda` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `dbtienda`;
+
+-- Volcando estructura para tabla dbtienda.cliente
+CREATE TABLE IF NOT EXISTS `cliente` (
+  `codcliente` int NOT NULL,
+  `dni` varchar(8) COLLATE utf8mb4_general_ci NOT NULL DEFAULT '',
+  `nombre` varchar(80) COLLATE utf8mb4_general_ci NOT NULL DEFAULT '',
+  `telefono` varchar(12) COLLATE utf8mb4_general_ci NOT NULL DEFAULT '',
+  `direccion` varchar(120) COLLATE utf8mb4_general_ci NOT NULL DEFAULT '',
+  PRIMARY KEY (`codcliente`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 -- La exportación de datos fue deseleccionada.
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
